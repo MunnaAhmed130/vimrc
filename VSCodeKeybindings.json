@@ -1,0 +1,98 @@
+// Place your key bindings in this file to override the defaults
+[
+    // { "key": "ctrl+n", "command": "explorer.newFile" },
+    // Place your key bindings in this file to override the defaults
+
+    // Ensure that tab button works in vim.
+    {
+        "key": "tab",
+        "command": "tab",
+        "when": "editorTextFocus && !editorTabMovesFocus"
+    },
+    {
+        "key": "shift+tab",
+        "command": "outdent",
+        "when": "editorTextFocus && !editorTabMovesFocus"
+    },
+    // NAVIGATION
+    {
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    }, // switch focus between terminal and editor
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // FILE TREE
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+shift+e"
+    },
+
+    {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+k",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+
+    {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "shift+n",
+        "command": "workbench.action.newWindow",
+        "when": "!explorerViewletFocus"
+    },
+    {
+        "command": "deleteFile",
+        "key": "ctrl+d",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+
+    // EXTRA
+    {
+        "key": "ctrl+shift+5",
+        "command": "editor.emmet.action.matchTag"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "workbench.action.toggleZenMode"
+    }
+]
