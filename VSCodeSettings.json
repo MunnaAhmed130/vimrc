@@ -1,0 +1,130 @@
+{
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "json.schemaDownload.enable": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+            "savePathSegmentKeys": null,
+            "savePathReplaceSegmentsWith": null
+        }
+    ],
+    "editor.wordWrap": "on",
+    "code-runner.runInTerminal": true,
+    "editor.minimap.enabled": false,
+    "files.associations": {
+        "*.ejs": "html",
+        "*.css": "css"
+    },
+
+    "emmet.includeLanguages": {
+        "postcss": "css"
+    },
+    "editor.guides.bracketPairs": "active",
+    "debug.disassemblyView.showSourceCode": false,
+    "css.lint.argumentsInColorFunction": "warning",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "html.format.wrapLineLength": 0,
+    "python.autoComplete.extraPaths": [],
+    "python.analysis.extraPaths": [
+        "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages"
+    ],
+    "prettier.tabWidth": 4,
+    "code-runner.ignoreSelection": true,
+    "breadcrumbs.enabled": false,
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative",
+
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    // press kj to escape insert mode
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>", "l"]
+        },
+        // { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["leader", "g"],
+            "after": ["O", "<Esc>"]
+        }, // NAVIGATION
+        // switch b/w buffers/ tab
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+
+        // { "before": ["leader", "j"], "commands": [":bprevious"] },
+        // { "before": ["leader", "k"], "commands": [":bnext"] },
+
+        // splits window
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // jump to panes
+        {
+            "before": ["leader", "h"],
+            "commands": ["workbench.action.focusLeftGroup"]
+        },
+        // {
+        //     "before": ["leader", "j"],
+        //     "commands": ["workbench.action.focusBelowGroup"]
+        // },
+        // {
+        //     "before": ["leader", "k"],
+        //     "commands": ["workbench.action.focusAboveGroup"]
+        // },
+        {
+            "before": ["leader", "l"],
+            "commands": ["workbench.action.focusRightGroup"]
+        },
+        // NICE TO HAVE
+        { "before": ["leader", "w"], "commands": [":w!"] }, // save file
+        { "before": ["leader", "q"], "commands": [":q!"] }, // quit file
+        { "before": ["leader", "x"], "commands": [":x!"] }, // save file and quit
+        {
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.prev"]
+        },
+        {
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.next"]
+        },
+        {
+            "before": ["<leader>", "c", "a"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["leader", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["leader", "p"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": ["g", "h"],
+            "commands": ["editor.action.showDefinitionPreviewHover"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        // toggle comment selection
+        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "editor.mouseWheelZoom": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    // enable vscodevim to access .vimrc file
+    "vim.vimrc.enable": true,
+    "window.zoomLevel": 1
+}
+
