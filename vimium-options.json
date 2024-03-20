@@ -1,0 +1,42 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nmap a firstTab\nmap ; lastTab\nmap , previousTab\nmap w previousTab\nmap . nextTab\nmap e nextTab\nmap q removeTab\nmap Q restoreTab\nmap zh scrollToLeft\nmap zl scrollToRight\nmap gh moveTabLeft\nmap gl moveTabRight\n# for youtube\nmap gf LinkHints.activateMode\nmap gF LinkHints.activateModeToOpenInNewTab",
+  "linkHintCharacters": "asdfghkl",
+  "scrollStepSize": 80,
+  "smoothScroll": false,
+  "settingsVersion": "2.0.5",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: #007ec7;\nborder: 0;\nopacity: .95;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: white;\nfont-weight: normal;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\ncolor:black;\n}",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://vim-adventures.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://simpleicons.org/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://10fastfingers.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://fonts.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://fonts.google.com/*"
+    },
+    {
+      "passKeys": "f,k,j,l,>,<",
+      "pattern": "https?://www.youtube.com/*"
+    }
+  ]
+}
