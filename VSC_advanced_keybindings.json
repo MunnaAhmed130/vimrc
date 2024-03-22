@@ -1,0 +1,348 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Ensure that tab button works in vim.
+  {
+    "key": "tab",
+    "command": "tab",
+    "when": "editorTextFocus && !editorTabMovesFocus && vim.mode == 'Insert'"
+  },
+
+  {
+    "key": "shift+tab",
+    "command": "outdent",
+    "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+
+  {
+    "key": "tab",
+    "command": "editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+
+  {
+    "key": "tab",
+    "command": "insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode && vim.mode == 'Insert'"
+  },
+
+  {
+    "key": "tab",
+    "command": "tabnine.tab-override",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && tabnine.tab-override && textInputFocus && vim.mode == 'Insert'"
+  },
+
+  {
+    "key": "tab",
+    "command": "acceptSelectedSuggestion",
+    "when": "acceptSuggestionOnEnter && suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  },
+
+  // {
+  //   "key": "tab",
+  //   "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+  //   "when": "editorTextFocus && !activeEditorGroupEmpty && vim.mode == 'Normal'"
+  // }  ,
+
+  //   {
+  //   "key": "tab",
+  //   "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+  //   "when": "!inputFocus && !activeEditorGroupEmpty && !terminalFocus && vim.mode == 'Normal'"
+  // },
+
+  {
+    "key": "tab",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "editorTextFocus &&  !activeEditorGroupEmpty && !terminalFocus && vim.mode == 'Normal'"
+  },
+
+  // Global symbols
+  { "key": "ctrl+t", "command": "workbench.action.showAllSymbols" },
+
+  // current file symbols
+  {
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.gotoSymbol",
+    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+  },
+
+  // {
+  //   "key": "alt+s",
+  //   "command": "workbench.action.gotoSymbol",
+  //   "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+  // },
+
+  { "key": "ctrl+y", "command": "redo" },
+
+  // close editor
+  { "key": "ctrl+w", "command": "workbench.action.closeActiveEditor" },
+
+  // close all editor
+  { "key": "ctrl+k w", "command": "workbench.action.closeEditorsInGroup" },
+
+  // focus on editor
+  {
+    "key": "alt+f",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus || filesExplorerFocus"
+  },
+
+  // search for files when there is no editor
+  {
+    "key": "alt+f",
+    "command": "workbench.action.quickOpen",
+    "when": "activeEditorGroupEmpty"
+  },
+
+  // find bar/ search bar
+  {
+    "key": "alt+f",
+    "command": "actions.find",
+    // "when": "editorTextFocus ||  editorIsOpen"
+    "when": "editorTextFocus"
+  },
+
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus && vim.mode == 'Insert'"
+  },
+
+  // suggestions
+  {
+    "key": "alt+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+
+  // JUMP BETWEEN EDITOR TO TERMINAL
+
+  // {
+  //  "key": "alt+k",
+  //   "command": "workbench.action.terminal.focus",
+  //   "when": "!suggestWidgetVisible && !terminalFocus"
+  // },
+  // {
+  //   "key": "alt+k",
+  //   // "command": "workbench.action.togglePanel",
+  //   "command": "workbench.action.terminal.toggleTerminal",
+  //   "when": "!suggestWidgetVisible && terminalFocus"
+  // },
+
+  {
+    "key": "alt+k",
+    "command": "workbench.action.togglePanel",
+    // "command": "workbench.action.terminal.toggleTerminal",
+    "when": "!suggestWidgetVisible"
+  },
+
+  // move through acitivity bar
+  {
+    "key": "alt+a",
+    "command": "workbench.action.focusActivityBar"
+  },
+
+  // {
+  //     "key": "alt+o",
+  //     "command": "workbench.action.nextSideBarView"
+  // },
+  // {
+  //     "key": "alt+i",
+  //     "command": "workbench.action.previousSideBarView"
+  // },
+
+  // JUMP BETWEEN EDITOR TO FILE TREE
+
+  // {
+  //     "key": "ctrl+left",
+  //     "command": "list.collapseAll",
+  //     "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  // },
+
+  {
+    "key": "alt+j",
+    // "command": "workbench.files.action.focusFilesExplorer",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "!filesExplorerFocus && !suggestWidgetVisible"
+  },
+
+  {
+    "key": "alt+j",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus"
+  },
+
+  // {
+  //   "key": "alt+c",
+  //   "command": "workbench.action.toggleSidebarVisibility"
+  // },
+
+  // { "key": "ctrl+d", "command": "workbench.action.closeActiveEditor" },
+
+  // TERMINAL NAVIGATION
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+  // MODIFY FILE TREE
+
+  {
+    "key": "e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus && !inputFocus || !inputFocus"
+  },
+
+  {
+    "key": "n",
+    // "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // {
+  //   "key": "alt+n",
+  //   "command": "explorer.newFolder",
+  //   "when": "explorerViewletFocus"
+  // },
+
+  // ctrl+shift+n for newWindow
+
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // EXTRA
+
+  // { "key": "ctrl+p", "command": "editor.action.clipboardPasteAction" },
+  {
+    "key": "ctrl+shift+5",
+    "command": "editor.emmet.action.matchTag"
+  },
+
+  // {
+  //     "key": "alt+g",
+  //     "command": "extension.liveServer.goOnline",
+  //     "when": "editorTextFocus"
+  // },
+  // {
+  //     "key": "alt+g",
+  //     "command": "extension.liveServer.goOffline",
+  //     "when": "editorTextFocus"
+  // },
+
+  // {
+  //     "key": "alt+g",
+  //     "command": "workbench.view.scm",
+  //     "when": "workbench.scm.active"
+  // },
+  // {
+  //     "key": "alt+x",
+  //     "command": "workbench.view.extensions",
+  //     "when": "viewContainer.workbench.view.extensions.enabled"
+  // },
+
+  {
+    "key": "alt+b",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // IN file search and replace
+  {
+    "key": "/",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible && !isComposing"
+  },
+  {
+    "key": "alt+/",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+
+  {
+    "key": "alt+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+
+  // Navigate in quick open
+  // ctrl+f or space+tab and then up and down using below keybindings
+  {
+    "key": "alt+j",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  }
+
+  // Status Bar
+
+  // {
+  //   "key": "alt+s",
+  //   "command": "workbench.action.focusStatusBar"
+  // },
+  // {
+  //   "key": "k",
+  //   "command": "workbench.statusBar.focusNext",
+  //   "when": "statusBarFocused"
+  // },
+  // {
+  //   "key": "j",
+  //   "command": "workbench.statusBar.focusPrevious",
+  //   "when": "statusBarFocused"
+  // }
+]
